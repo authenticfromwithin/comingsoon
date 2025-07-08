@@ -1,0 +1,56 @@
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+    font-family: 'Georgia', serif;
+    background: black;
+}
+
+.background {
+    background-image: url('assets/forest-background.png');
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.center-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.logo {
+    width: 300px;
+    animation: glowFlicker 3s infinite;
+}
+
+.coming-soon {
+    color: white;
+    font-size: 2em;
+    margin-top: 20px;
+    animation: glowFlicker 3s infinite;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes glowFlicker {
+    0%, 100% {
+        filter: drop-shadow(0 0 8px #ffffff);
+        opacity: 1;
+    }
+    50% {
+        filter: drop-shadow(0 0 15px #b2f0e6);
+        opacity: 0.7;
+    }
+}
